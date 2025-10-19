@@ -101,6 +101,10 @@ if st.session_state.get("run"):
             st.write(f"**Nguồn:** {src.name}")
             links = src.list_article_links()
             st.write(f"- Thu thập link: {len(links)}")
+            # Hiển thị 20 link đầu tiên để debug
+            with st.expander(f"Xem 20 link đầu từ {src.name}"):
+                for u in links[:20]:
+                    st.write(u)
             for i, url in enumerate(links, start=1):
                 try:
                     art = src.fetch_article(url)
