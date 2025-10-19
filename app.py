@@ -43,6 +43,7 @@ use_llm = False
 if "OPENAI_API_KEY" in st.secrets:
     use_llm = st.sidebar.toggle("Dùng LLM tóm tắt (cần key)", value=False)
 
+debug_bypass_ticker = st.sidebar.toggle("Bỏ qua lọc mã (debug)", value=False)
 if st.sidebar.button("🚀 Bắt đầu", type="primary"):
     st.session_state["run"] = True
 
@@ -124,9 +125,12 @@ if st.session_state.get("run"):
                     name_index=name_index,
                     ambiguous_codes=ambiguous_codes,
                 )
-                if not matched:
+                if not matched and not debug_bypass_ticker:
                     log.no_ticker += 1
                     continue
+                if not matched and debug_bypass_ticker:
+                    # Gắn nhãn tạm để nhìn thấy bài đi qua
+                    matched = ["(NO_MATCH)"]
                 # Summarize
                 summary = summarize_text(art.content, use_llm=use_llm)
                 # Sentiment / Risk
