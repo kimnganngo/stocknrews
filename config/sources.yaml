@@ -25,8 +25,8 @@ sources:
       start: 1
       stop: 3
     list_selector: "a[href]"
-    allow_regex: "/\d{4}/\d{2}/.+\.htm"
-    url_date_regex: "/(\d{4})/(\d{2})/(\d{2})/"
+    allow_regex: '/\d{4}/\d{2}/.+\.htm'
+    url_date_regex: '/(\d{4})/(\d{2})/(\d{2})/'
     content_selectors:
       - "article"
       - "div[id*=detail], div[class*=content]"
