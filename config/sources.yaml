@@ -6,7 +6,7 @@ sources:
       type: query
       param: "p"
       start: 1
-      stop: 3
+      stop: 8
     list_selector: "a[href]"
     allow_pattern: ".chn"
     date_selectors:
@@ -23,7 +23,7 @@ sources:
       type: query
       param: "page"
       start: 1
-      stop: 3
+      stop: 8
     list_selector: "a[href]"
     allow_regex: '/\d{4}/\d{2}/.+\.htm'
     url_date_regex: '/(\d{4})/(\d{2})/(\d{2})/'
