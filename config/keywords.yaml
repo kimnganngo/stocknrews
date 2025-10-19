@@ -1,0 +1,7 @@
+sentiment:
+  positive: ["tăng trần", "kỷ lục", "lợi nhuận tăng", "mở rộng", "đạt", "vượt kế hoạch"]
+  negative: ["giảm sàn", "thua lỗ", "điều tra", "xử phạt", "vi phạm", "khởi tố"]
+risk:
+  severe: ["điều tra", "thao túng", "nội gián", "khởi tố", "đình chỉ", "phạt tiền", "hủy niêm yết"]
+  warning: ["cảnh báo", "lưu ý", "kiểm tra", "giải trình", "xem xét"]
+ambiguous_codes: ["TIN", "CEO", "THU", "BAN", "CO", "AN", "VAN"]
